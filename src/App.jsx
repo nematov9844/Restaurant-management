@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard';
 import Products from './pages/Products';
 import Favorite from './pages/Favorite';
 import Inbox from './pages/Inbox';
+import Home from './pages/Home';
 
 const { Header, Content } = Layout;
 
@@ -20,7 +21,7 @@ const App = () => (
 
       <Content  className='bg-[rgba(0,21,47,0.9)] text-white text-4xl font-bold p-5 w-full h-screen'>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard/>} />
           <Route path="/products" element={<Products />} />
           <Route path="/favorite" element={<Favorite />} />
