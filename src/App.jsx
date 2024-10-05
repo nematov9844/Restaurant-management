@@ -5,6 +5,9 @@ import Users from './pages/Users';
 import Orders from './pages/Orders';
 import HeaderComponent from './layout/headerDetails';
 import Dashboard from './pages/Dashboard';
+import Products from './pages/Products';
+import Favorite from './pages/Favorite';
+import Inbox from './pages/Inbox';
 
 const { Header, Content } = Layout;
 
@@ -15,12 +18,14 @@ const App = () => (
       <div className='w-full'>
       <Header theme="dark"><HeaderComponent/></Header>
 
-      <Content className='bg-green-500 w-full h-screen'>
+      <Content  className='bg-[rgba(0,21,47,0.9)] text-white text-4xl font-bold p-5 w-full h-screen'>
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard/>} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/orders" element={<Orders />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/favorite" element={<Favorite />} />
+          <Route path="/inbox" element={<Inbox />} />
+          <Route path="/orderList" element={<Orders />} />
         </Routes>
       </Content>
       </div>

@@ -20,7 +20,7 @@ const items = [
 
 const Navbar = () => (
   <Sider  width={86} collapsedWidth={80}>
-    <Menu  theme="dark" mode="inline" items={items} />
+    <Menu   mode="inline" items={items} theme="dark"/>
   </Sider>
 );
 
