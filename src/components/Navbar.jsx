@@ -19,7 +19,7 @@ const items = [
 ];
 
 const Navbar = () => (
-  <Sider  width={86} collapsedWidth={80}>
+  <Sider  width={86} collapsedWidth={80} >
     <Menu   mode="inline" items={items} theme="dark"/>
   </Sider>
 );

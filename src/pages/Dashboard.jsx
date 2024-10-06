@@ -4,7 +4,7 @@ import DashboardDetails from "../components/DashboardDetails";
 import DealDetails from "../components/deals-details";
 export default function Dashboard() {
   return (
-    <div className="flex flex-col gap-4 h-screen overflow-y-auto scrollbar-hide">
+    <div className="flex flex-col gap-4 h-[90vh] overflow-y-auto scrollbar-hide">
       Dashboard
       <DashboardDetails/>
       <SalesDetails />
