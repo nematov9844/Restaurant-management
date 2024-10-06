@@ -21,7 +21,7 @@ const SalesDetails = () => {
     datasets: [
       {
         label: "Sales Performance",
-        data: [20, 40, 25, 64.366477, 30, 50, 30, 60, 40, 45, 50, 30],
+        data: [20, 40, 20,90, 64.366477, 30, 50, 30, 60, 40, 45, 50, 30],
         fill: false,
         backgroundColor: "rgba(75, 192, 192, 1)",
         borderColor: "rgba(75, 192, 192, 1)",
@@ -61,7 +61,7 @@ const SalesDetails = () => {
 
   return (
     <div className="bg-gray-800 rounded-lg shadow-lg w-full">
-      <div className="p-6 rounded-lg  w-full">
+      <div className="p-6 rounded-lg w-full">
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-white text-3xl font-bold">Sales Details</h1>
           <select className="bg-gray-700 text-white rounded-lg p-1 text-sm w-32 focus:outline-none focus:ring-2 focus:ring-teal-400">
@@ -71,10 +71,8 @@ const SalesDetails = () => {
           </select>
         </div>
       </div>
-      <div className="flex items-center w-full m-auto">
-        <div className="w-[100%]  h-[250px]">
-          <Line data={data} options={options} />
-        </div>
+      <div className="grid grid-cols-1 p-4">
+          <Line data={data} options={options} width={100} height={25} />
       </div>
     </div>
   );
