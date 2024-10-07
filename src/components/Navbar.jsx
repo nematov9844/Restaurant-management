@@ -1,26 +1,21 @@
 import { Layout, Menu } from "antd";
 import { Link } from 'react-router-dom';
-import DashboardIcon from "../assets/icons/dashboard_icon";
-import Menuicon from "../assets/icons/menuicon";
-import ProductIcon from "../assets/icons/productIcon";
-import FavoritesIcon from "../assets/icons/favorites";
-import InboxIcon from "../assets/icons/inboxIcon";
-import OrderIcon from "../assets/icons/orderIcon";
+// Ant Design ikonlarini import qilamiz
+import { AppstoreOutlined, DashboardOutlined, HeartOutlined, InboxOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 
 const { Sider } = Layout;
 
 const items = [
-  { label: <Link to="/"><Menuicon /></Link>, key: "1" },
-  { label: <Link to="/dashboard"><DashboardIcon /></Link>, key: "2" },
-  { label: <Link to="/products"><ProductIcon /></Link>, key: "3" },
-  { label: <Link to="/favorite"><FavoritesIcon /></Link>, key: "4" },
-  { label: <Link to="/inbox"><InboxIcon /></Link>, key: "5" },
-  { label: <Link to="/orderlist"><OrderIcon /></Link>, key: "6" },
+  { label: <Link to="/">Menu</Link>, key: "1", icon: <AppstoreOutlined /> },  // Menu icon
+  { label: <Link to="/dashboard">Dashboard</Link>, key: "2", icon: <DashboardOutlined /> },  // Dashboard icon
+  { label: <Link to="/products">Products</Link>, key: "3", icon: <ShoppingCartOutlined /> },  // Product icon
+  { label: <Link to="/favorite">Favorite</Link>, key: "4", icon: <HeartOutlined /> },  // Favorites icon
+  { label: <Link to="/inbox">Inbox</Link>, key: "5", icon: <InboxOutlined /> },  // Inbox icon
 ];
 
 const Navbar = () => (
-  <Sider  width={86} collapsedWidth={80} >
-    <Menu   mode="inline" items={items} theme="dark"/>
+  <Sider  collapsedWidth={80}>
+    <Menu mode="inline" items={items} theme="dark" />
   </Sider>
 );
 

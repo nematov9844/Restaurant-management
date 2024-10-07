@@ -41,11 +41,11 @@ const App = () => {
       <Layout style={{ minHeight: "100vh" }}>
         <Navbar />
         <div className="w-full">
-          <Header theme="dark" >
+          <Header theme="dark"  >
             <HeaderComponent />
           </Header>
 
-          <Content className="bg-[rgba(0,21,47,0.9)] text-white text-4xl font-bold p-5 w-full h-[100vh]">
+          <Content  className="bg-[rgba(0,21,47,0.9)] text-white text-4xl font-bold p-5 w-full h-[100vh]">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/dashboard" element={<Dashboard />} />
