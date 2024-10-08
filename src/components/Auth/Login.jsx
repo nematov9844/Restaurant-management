@@ -11,7 +11,6 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    // O'zgaruvchilarni tekshirish, xohlasangiz
     login(); // Foydalanuvchini tizimga kiritish
     navigate("/loginAuth/dashboard"); // Tizimga kiritilgandan so'ng Dashboard sahifasiga o'tish
   };

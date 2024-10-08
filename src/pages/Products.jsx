@@ -88,12 +88,18 @@ const Products = () => {
   };
 
   const handleUpload = ({ file }) => {
+    if (file.size > 2 * 1024 * 1024) { // 2MB dan katta fayllarni qabul qilmaymiz
+      alert('Fayl hajmi juda katta. Iltimos, kichikroq fayl yuklang!');
+      return;
+    }
+  
     const reader = new FileReader();
     reader.onloadend = () => {
-      setImageFile(reader.result); // Set image as base64
+      setImageFile(reader.result); // Faylni Base64 formatida o'qish
     };
     reader.readAsDataURL(file);
   };
+  
 
   return (
     <div className="p-5 h-[90%] overflow-y-scroll">
@@ -109,7 +115,7 @@ const Products = () => {
             className="border-black text-white"
             key={product.id}
             hoverable
-            cover={<img alt={product.name} src={product.img} className='max-h-[240px] min-h-[240px] object-cover' />}
+            cover={<img alt={product.name} src={product.img} className='max-h-[150px] lg:max-h-[240px] lg:min-h-[240px] min-h-[150px] object-cover' />}
             actions={[
               <Button onClick={() => showModal(product)} className="mr-2">Tahrirla</Button>,
               <Button onClick={() => handleDelete(product.id)} danger>O'chirish</Button>,
